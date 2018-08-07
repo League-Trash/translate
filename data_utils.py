@@ -277,9 +277,9 @@ def prepare_wmt_data(data_dir, en_vocabulary_size, fr_vocabulary_size, tokenizer
 
   # Get wmt data to the specified directory.
   # train_path = get_wmt_enfr_train_set(data_dir)
-  train_path = "./Data/004self"
+  train_path = "./Data/NewData2/004self"
   # dev_path = get_wmt_enfr_dev_set(data_dir)
-  dev_path = "./Data/004dev"
+  dev_path = "./Data/NewData2/004dev"
 
   #en/fr files here
   from_train_path = train_path + "Q.txt"
@@ -336,3 +336,4 @@ def prepare_data(data_dir, from_train_path, to_train_path, from_dev_path,
   return (from_train_ids_path, to_train_ids_path,
           from_dev_ids_path, to_dev_ids_path,
           from_vocab_path, to_vocab_path)
+

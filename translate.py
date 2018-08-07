@@ -78,7 +78,7 @@ FLAGS = tf.app.flags.FLAGS
 
 # We use a number of buckets and pad to the closest one for efficiency.
 # See seq2seq_model.Seq2SeqModel for details of how they work.
-_buckets = [(5, 10), (10, 15), (20, 25), (40, 50)]
+_buckets = [(5, 30), (10, 40), (15, 45), (20, 50)]
 
 
 def read_data(source_path, target_path, max_size=None):
@@ -215,6 +215,7 @@ def train():
       step_time += (time.time() - start_time) / FLAGS.steps_per_checkpoint
       loss += step_loss / FLAGS.steps_per_checkpoint      
       current_step += 1
+      print(current_step)
 
       # Once in a while, we save checkpoint, print statistics, and run evals.
       if current_step % FLAGS.steps_per_checkpoint == 0:
